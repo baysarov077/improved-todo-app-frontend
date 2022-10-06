@@ -1,13 +1,86 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-todos-block {
+  width: 40%;
+  margin: auto;
+  margin-top: 20vh;
+}
+
+.todo_add_block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 10px;
+}
+
+.add_input {
+  width: 72%;
+  height: 2.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2) ;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 22px;
+  outline: none;
+}
+
+.add_button, .find_button {
+  width: 27%;
+  height: 2.5em;
+  background-color: gray;
+  color: #fff;
+  font-size: 22px;
+  border: 0;
+  border-radius: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+.add_button:hover, .find_button:hover {
+  background-color: #fff;
+  color: gray;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  
+}
+
+.todos {
+  max-height: 300px;
+  overflow: scroll;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  padding: 10px;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.h2-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.find_button {
+  background: rgb(0, 128, 255)
 }
