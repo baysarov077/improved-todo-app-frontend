@@ -12,7 +12,7 @@ const todoSlice = createSlice({
       state.todos = action.payload;
     });
     builder.addCase(postTodo.fulfilled.type, (state, action) => {
-      state.todos.push(action.payload);
+      state.todos.unshift(action.payload);
     });
     builder.addCase(deleteTodo.fulfilled.type, (state, action) => {
       state.todos = state.todos.filter(

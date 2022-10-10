@@ -4,15 +4,13 @@ import { deleteTodo, patchTodo } from '../../app/reducers/todoReducer';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './todo.css'
 
-const Todo = ({text, id, completed}) => {
+const Todo = ({text, id, completed, date}) => {
 
   const dispatch = useDispatch()
 
   const handleDelete = () => {
     dispatch(deleteTodo(id))
   }
-
-  let atDate = new Date().toString()
 
   return (
     <div>
@@ -26,7 +24,7 @@ const Todo = ({text, id, completed}) => {
         <p>{text}</p>
         <DeleteIcon style={{cursor: 'pointer'}} onClick={() => handleDelete()}/>
       </div>
-      <div className='atDate' style={{fontSize: '12px', fontWeight: 'normal'}}>{atDate.split(' ').splice(1, 4).join('. ')}</div>
+      <div className='atDate' style={{fontSize: '12px', fontWeight: 'normal'}}>{date.slice(4, 25)}</div>
     </div>
   );
 };

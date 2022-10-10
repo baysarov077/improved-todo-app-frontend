@@ -65,6 +65,7 @@ const Todos = () => {
                   id={item._id}
                   text={item.text}
                   completed={item.completed}
+                  date={item.date}
                 />
               );
             })
@@ -75,6 +76,7 @@ const Todos = () => {
                   id={item._id}
                   text={item.text}
                   completed={item.completed}
+                  date={item.date}
                 />
               );
             })}
